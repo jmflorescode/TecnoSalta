@@ -1,0 +1,90 @@
+/*
+ * Estilos propios de la tienda. Los colores (-color-...) vienen del tema AtlantaFX,
+ * por eso todo se adapta solo al modo claro y al modo oscuro.
+ */
+
+.fondo {
+    -fx-background-color: -color-bg-subtle;
+}
+
+/* Recuadro central de login y registro */
+.panel {
+    -fx-background-color: -color-bg-default;
+    -fx-border-color: -color-border-default;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 28;
+}
+
+/* Barra superior */
+.barra {
+    -fx-background-color: -color-bg-default;
+    -fx-border-color: transparent transparent -color-border-default transparent;
+    -fx-padding: 10 20;
+}
+
+.filtros {
+    -fx-padding: 14 20;
+}
+
+.contenido {
+    -fx-padding: 20;
+}
+
+.grilla {
+    -fx-padding: 6 20 20 20;
+}
+
+/* Tarjeta de producto del catálogo */
+.tarjeta {
+    -fx-background-color: -color-bg-default;
+    -fx-border-color: -color-border-default;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12;
+    -fx-cursor: hand;
+}
+
+.tarjeta:hover {
+    -fx-border-color: -color-accent-emphasis;
+}
+
+.nombre-producto {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.precio {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.sin-foto-letra {
+    -fx-font-size: 52px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.mensaje-error {
+    -fx-text-fill: -color-danger-fg;
+}
+
+.mensaje-ok {
+    -fx-text-fill: -color-success-fg;
+}
+
+/* Paneles con desplazamiento sin el marco que dibuja el tema */
+.panel-scroll,
+.panel-scroll > .viewport {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.formulario {
+    -fx-background-color: -color-bg-subtle;
+    -fx-background-radius: 8;
+    -fx-padding: 16;
+}

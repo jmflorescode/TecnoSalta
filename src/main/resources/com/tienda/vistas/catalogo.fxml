@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.tienda.controlador.CatalogoController">
+    <top>
+        <VBox>
+            <fx:include fx:id="barra" source="barra.fxml"/>
+            <HBox spacing="10" alignment="CENTER_LEFT" styleClass="filtros">
+                <TextField fx:id="campoBusqueda" promptText="Buscar por nombre" HBox.hgrow="ALWAYS"/>
+                <ComboBox fx:id="comboCategoria" prefWidth="210"/>
+                <TextField fx:id="campoPrecioMaximo" promptText="Precio máximo" prefWidth="140"/>
+                <Button text="Limpiar filtros" onAction="#limpiarFiltros"/>
+            </HBox>
+            <Label fx:id="estado" styleClass="text-muted">
+                <VBox.margin>
+                    <Insets left="20" bottom="8"/>
+                </VBox.margin>
+            </Label>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="panel-scroll">
+            <FlowPane fx:id="grilla" hgap="16" vgap="16" styleClass="grilla"/>
+        </ScrollPane>
+    </center>
+</BorderPane>
